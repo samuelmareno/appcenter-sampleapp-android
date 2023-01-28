@@ -74,19 +74,19 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(@IntRange(from = 0, to = 6) final int position) {
             if (views[position] instanceof WelcomeActivity) {
-                return "Welcome";
+                return "Welcome 2";
             } else if (views[position] instanceof BuildActivity) {
-                return "Build";
+                return "Build 2";
             } else if (views[position] instanceof TestActivity) {
-                return "Test";
+                return "Test 2";
             } else if (views[position] instanceof DistributeActivity) {
-                return "Distribute";
+                return "Distribute 2";
             } else if (views[position] instanceof CrashesActivity) {
-                return "Crashes";
+                return "Crashes 2";
             } else if (views[position] instanceof AnalyticsActivity) {
-                return "Analytics";
+                return "Analytics 2";
             } else if (views[position] instanceof PushActivity) {
-                return "Push";
+                return "Push 2";
             }
 
             return views[position].getClass().getSimpleName().trim().replace("Activity", "");
