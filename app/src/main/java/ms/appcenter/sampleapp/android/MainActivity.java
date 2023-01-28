@@ -38,15 +38,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_root);
 
         // Initialize SDK
-        if (!BuildConfig.APPCENTER_APP_SECRET.equals("")) {
-            // Use APPCENTER_APP_SECRET environment variable if it exists
-            AppCenter.start(getApplication(), BuildConfig.APPCENTER_APP_SECRET,
-                    Analytics.class, Crashes.class, Distribute.class);
-        } else {
-            // Otherwise use the hardcoded string value here
-            AppCenter.start(getApplication(), "<APP SECRET HERE>",
-                    Analytics.class, Crashes.class, Distribute.class);
-        }
+        // Use APPCENTER_APP_SECRET environment variable if it exists
+        AppCenter.start(getApplication(), BuildConfig.APPCENTER_APP_SECRET,
+                Analytics.class, Crashes.class, Distribute.class);
 
 
         if (BuildConfig.DEBUG) {
